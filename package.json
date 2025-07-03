@@ -1,7 +1,7 @@
 {
   "name": "run-project-commands",
   "version": "1.0.0",
-  "description": "A comprehensive CLI toolkit for running and managing project commands - featuring task automation, project workflow management, and developer utilities",
+  "description": "A powerful CLI toolkit for developers to run, manage, and automate project commands across JavaScript/TypeScript projects with task automation and workflow management",
   "keywords": [
     "cli",
     "commands",
@@ -11,12 +11,18 @@
     "workflow",
     "automation",
     "typescript",
+    "javascript",
     "developer-tools",
     "build-tools",
     "task-runner",
     "project-management",
     "cli-tools",
-    "command-runner"
+    "command-runner",
+    "npm-scripts",
+    "devops",
+    "productivity",
+    "node-cli",
+    "command-line"
   ],
   "bin": {
     "rpc": "./dist/cli.js"
