@@ -68,8 +68,7 @@
     "clean": "npx rimraf dist",
     "prepublishOnly": "npm run clean && npm run build",
     "release:patch": "npm version patch",
-    "postversion": "git push && git push --tags && npm publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postversion": "git push && git push --tags && npm publish"
   },
   "dependencies": {
     "@types/inquirer": "^9.0.8",
