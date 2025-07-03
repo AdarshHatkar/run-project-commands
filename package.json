@@ -68,7 +68,9 @@
     "clean": "npx rimraf dist",
     "prepublishOnly": "npm run clean && npm run build",
     "release:patch": "npm version patch",
-    "postversion": "git push && git push --tags && npm publish"
+    "postversion": "git push && git push --tags && npm publish",
+    "link": "npm run build && npm link",
+    "unlink": "npm unlink -g run-project-commands"
   },
   "dependencies": {
     "@types/inquirer": "^9.0.8",
