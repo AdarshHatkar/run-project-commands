@@ -11,9 +11,6 @@ export default defineConfig([
     shims: true,
     dts: true,
     minify: false,
-    banner: {
-      js: '#!/usr/bin/env node',
-    },
   },
   // Library build configuration
   {
