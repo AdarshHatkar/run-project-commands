@@ -99,10 +99,12 @@ async function selectAndRunScript(scripts: Record<string, string>): Promise<void
         type: 'list',
         name: 'selectedScript',
         message: 'Select a script to run:',
-        choices: scriptNames.map(name => ({
-          name: `${chalk.green(name)} ${chalk.dim(`→ ${scripts[name]}`)}`,
+        choices: scriptNames.map((name, index) => ({
+          name: `${index + 1}. ${chalk.green(name)} ${chalk.dim(`→ ${scripts[name]}`)}`,
           value: name
-        }))
+        })),
+        loop: false,
+        pageSize: scriptNames.length // Show all scripts without pagination
       }
     ]);
     
@@ -127,9 +129,11 @@ export async function resolveCommandConflict(scriptName: string): Promise<'scrip
         name: 'choice',
         message: `'${scriptName}' exists as both a script and an RPC command. Which would you like to run?`,
         choices: [
-          { name: `Run as a script (from package.json)`, value: 'script' },
-          { name: `Run as an RPC command`, value: 'command' }
-        ]
+          { name: `1. Run as a script (from package.json)`, value: 'script' },
+          { name: `2. Run as an RPC command`, value: 'command' }
+        ],
+        loop: false,
+        pageSize: 2 // Show all options without pagination
       }
     ]);
     
