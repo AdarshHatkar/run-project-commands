@@ -28,9 +28,40 @@ npx rpc
 
 ## Usage
 
+### Basic Usage
+
 When you run `rpc` in a project directory, it will display the package name and version from the package.json file.
 
-You can run the command from any directory on your system when installed globally.
+```bash
+rpc
+```
+
+### Available Commands
+
+#### Doctor Command
+
+Use the doctor command to check if the package is installed properly and if updates are available:
+
+```bash
+rpc doctor
+```
+
+This command performs the following checks:
+- Verifies if RPC is installed globally
+- Checks for available updates
+- Validates Node.js compatibility
+- Provides troubleshooting tips
+
+### Options
+
+```bash
+# Display version information
+rpc -v
+rpc --version
+
+# Display help
+rpc --help
+```
 
 ## Development
 
