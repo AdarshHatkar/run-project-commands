@@ -90,16 +90,8 @@ function executeScript(scriptName: string, scriptCommand: string): Promise<void>
 
 // Interactive selection of scripts
 async function selectAndRunScript(scripts: Record<string, string>): Promise<void> {
-  // List all scripts directly instead of showing a separate header
+  // Get script names without displaying the list (will be shown in the prompt)
   const scriptNames = Object.keys(scripts);
-  
-  console.log(chalk.yellow.bold('Available scripts:'));
-  
-  scriptNames.forEach(name => {
-    console.log(`  ${chalk.cyan(name)}: ${chalk.dim(scripts[name])}`);
-  });
-  
-  console.log(''); // Add a blank line for readability
   
   try {
     const { selectedScript } = await inquirer.prompt([
@@ -177,7 +169,6 @@ export async function runCommand(scriptName?: string, forceAsScript = false): Pr
     // If no arguments are provided, show a nicer welcome message
     if (!scriptName) {
       console.log(chalk.blue.bold('\n🚀 Run Project Commands (RPC)'));
-      console.log(chalk.dim('Available scripts in package.json:\n'));
     }
 
     // Skip spinner for direct script execution to avoid confusion
