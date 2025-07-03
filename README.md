@@ -136,7 +136,13 @@ If you've installed the package globally but still get a "command not found" err
 - Node.js: >=16.0.0
 - Platforms: Windows, macOS, Linux
 
-## 📄 License
+## � Future Plans
+
+While we're planning to expand this tool to support various project types in the future, our current focus is on Node.js/JavaScript/TypeScript projects. We aim to make RPC a universal tool for developers across different technologies.
+
+If you're interested in adding new functionality or extending support for other project types, feel free to raise a pull request! Contributions are always welcome.
+
+## �📄 License
 
 [MIT](LICENSE) © [Adarsh Hatkar](https://github.com/AdarshHatkar)
 
